@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const NavBar = ({ user }) => {
+const NavBar = ({ user, handleSignout }) => {
   return (
     <nav>
       {user ? (
@@ -9,7 +9,9 @@ const NavBar = ({ user }) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="">Sign out</Link>
+            <Link to="/" onClick={handleSignout}>
+              Sign out
+            </Link>
           </li>
         </ul>
       ) : (
